@@ -111,7 +111,7 @@ Shader "Hidden/ChromaticAberration" {
 		// debug #2:
 		//return isEdge;
 
-		color.rb = lerp(color.rb, blurredTap.rb, isEdge);
+		color.rgb = lerp(color.rgb, blurredTap.rgb, isEdge);
 		
 		return color;
 	}
