@@ -178,6 +178,28 @@ public class MeshGenerator : MonoBehaviour {
         return GeometryUtility.TestPlanesAABB (planes, bounds);
     }
 
+    // CUSTOM DESTROY
+    public void UpdateChunkMesh_Removeverteces(Vector3 location, float radius, Chunk chunk) {
+
+
+
+        UpdateChunkMesh(chunk);
+        //Mesh mesh = chunk.mesh;
+
+        /*Vector3[] new_verts = mesh.vertices;
+        for (int i = 0; i < new_verts.Length; i++) {
+            if (Vector3.Distance(location, new_verts[i]) <= radius) {
+                Debug.Log("Destroying index: "+ i);
+                new_verts[i] = Vector3.zero;
+            }
+        }
+        mesh.vertices = new_verts;
+        mesh.triangles = mesh.triangles;
+
+        mesh.RecalculateNormals();*/
+        Debug.Log("recalculated mesh...");
+    }
+
     public void UpdateChunkMesh (Chunk chunk) {
         int numVoxelsPerAxis = numPointsPerAxis - 1;
         int numThreadsPerAxis = Mathf.CeilToInt (numVoxelsPerAxis / (float) threadGroupSize);
