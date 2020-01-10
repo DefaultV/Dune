@@ -44,10 +44,11 @@ public class VehicleCont : MonoBehaviour
             rb.AddForce(trns.forward * vec_speed * 2 * Time.deltaTime * 1000);
         }
         look();
-
+        //Debug.Log(rb.angularVelocity);
         //if (rb.velocity.z >= 1) {
         //    rb.AddForce(-Vector3.forward * vec_speed);
         //}
+        //Debug.Log(rb.velocity);
         //Debug.Log(rb.velocity);
     }
 
